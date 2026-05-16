@@ -1,7 +1,7 @@
 import {
   setLanguageLayout,
   setupKeyboard
-} from 'src/services/keyboard/content/keyboard/keyboardScript'
+} from './keyboardScript'
 
 function setup() {
   chrome.storage.sync.get({
