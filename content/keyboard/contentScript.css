@@ -190,7 +190,7 @@ li.hg-candidate-box-list-item:active {
     position: fixed;
     z-index: 20000;
     width: 100%;
-    max-width: 1440px;
+    max-width: none;
     background: #e3e3e3;
     background: linear-gradient(to right bottom,#eee,#ebebeb,#e8e8e8,#e6e6e6,#e3e3e3);
     -webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,.25),0 0 20px -8px rgba(0,0,0,.15);
