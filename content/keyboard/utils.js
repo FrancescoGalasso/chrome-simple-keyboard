@@ -45,8 +45,10 @@ export function isChildElement(child, target) {
 }
 
 export function performNativeKeyPress(element, keyCode) {
-    element.dispatchEvent(new Event("keydown", { keyCode: keyCode, which: keyCode }));
-    element.dispatchEvent(new Event("keypress", { keyCode: keyCode, which: keyCode }));
+    element.dispatchEvent(new KeyboardEvent("keydown", { keyCode: keyCode, which: keyCode, bubbles: true }));
+    element.dispatchEvent(new KeyboardEvent("keypress", { keyCode: keyCode, which: keyCode, bubbles: true }));
     element.dispatchEvent(new Event("input", { bubbles: true }));
-    //element.dispatchEvent(new Event("change", { bubbles: true }));
+    element.dispatchEvent(new KeyboardEvent("keyup", { keyCode: keyCode, which: keyCode, bubbles: true }));
+    // change intentionally not dispatched per key — fires naturally on blur,
+    // and dispatching it eagerly upsets framework form-validation listeners.
 }
