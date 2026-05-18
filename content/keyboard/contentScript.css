@@ -1,5 +1,5 @@
 .hg-theme-default {
-    background-color: #ececec;
+    background-color: #111317;
     border-radius: 5px;
     box-sizing: border-box;
     font-family: HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
@@ -49,17 +49,17 @@
 
 .hg-theme-default .hg-button {
     align-items: center;
-    background: #fff;
-    border-bottom: 1px solid #b5b5b5;
+    background: linear-gradient(to top, #3c3c3c, #919191);
+    border-bottom: 1px solid #000;
     border-radius: 5px;
-    box-shadow: 0 0 3px -1px rgba(0, 0, 0, .3);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .4), inset 0 -1px 1px rgba(0, 0, 0, 1), 0 0 3px -1px rgba(0, 0, 0, .3);
     box-sizing: border-box;
     cursor: pointer;
     display: flex;
     height: 40px;
     justify-content: center;
     padding: 5px;
-    color: black;
+    color: #fff;
     font-size: 20px;
 }
 
@@ -68,7 +68,12 @@
 }
 
 .hg-theme-default .hg-button.hg-activeButton {
-    background: #efefef
+    background: rgba(255, 255, 255, .25)
+}
+
+.hg-theme-default .hg-button.hg-functionBtn {
+    background: linear-gradient(to top, #212021, #525152);
+    color: #fff;
 }
 
 .hg-theme-default.hg-layout-numeric .hg-button {
@@ -100,8 +105,8 @@
 }
 
 .hg-theme-default .hg-button.hg-selectedButton {
-    background: rgba(5, 25, 70, .53);
-    color: #fff
+    background: #ddd;
+    color: #333
 }
 
 .hg-theme-default .hg-button.hg-standardBtn[data-skbtn=".com"] {
@@ -191,10 +196,10 @@ li.hg-candidate-box-list-item:active {
     z-index: 20000;
     width: 100%;
     max-width: none;
-    background: #e3e3e3;
-    background: linear-gradient(to right bottom,#eee,#ebebeb,#e8e8e8,#e6e6e6,#e3e3e3);
-    -webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,.25),0 0 20px -8px rgba(0,0,0,.15);
-    box-shadow: inset 1px 1px 0 rgba(255,255,255,.25),0 0 20px -8px rgba(0,0,0,.15);
+    background: #111317;
+    background: linear-gradient(to top, #000, #333);
+    -webkit-box-shadow: inset 0 1px 1px rgba(255,255,255,.2), 0 0 20px -4px rgba(0,0,0,.4);
+    box-shadow: inset 0 1px 1px rgba(255,255,255,.2), 0 0 20px -4px rgba(0,0,0,.4);
     padding: 25px 20px 20px;
     left: 0;
     right: 0;
